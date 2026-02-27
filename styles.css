@@ -1,0 +1,608 @@
+/* ============================================================
+   JOLAN CHAPPAZ — PORTFOLIO
+   Figtree · Mobile-first · Blanc/gris
+   ============================================================ */
+
+:root {
+  --white: #ffffff;
+  --grey-50: #fafafa;
+  --grey-100: #f0f0f0;
+  --grey-200: #e5e5e5;
+  --grey-300: #d4d4d4;
+  --grey-400: #a3a3a3;
+  --grey-500: #737373;
+  --grey-600: #525252;
+  --grey-800: #262626;
+  --grey-900: #171717;
+  --black: #0a0a0a;
+
+  --font: 'Figtree', sans-serif;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --nav-height: 48px;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 300;
+  color: var(--grey-900);
+  background: var(--white);
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+img { display: block; max-width: 100%; }
+button { border: none; background: none; cursor: pointer; font-family: inherit; color: inherit; }
+a { color: inherit; text-decoration: none; }
+
+/* ============================================================
+   TYPOGRAPHY SYSTEM
+   - nav-name: Extrabold 800 italic
+   - nav-btn: Regular 400 italic
+   - section titles (dropdown/burger items): Regular 400 normal
+   - everything else: Light 300
+   ============================================================ */
+
+/* ============================================================
+   NAVBAR — DESKTOP (hidden on mobile)
+   ============================================================ */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+  padding: 0 40px;
+  border-bottom: 1px solid var(--grey-200);
+  transition: background 0.4s, border-color 0.4s, color 0.4s;
+  background: var(--white);
+}
+
+.navbar--overlay {
+  background: transparent;
+  border-bottom-color: transparent;
+  color: var(--white);
+}
+
+/* Extrabold 800 italic */
+.nav-name {
+  font-family: var(--font);
+  font-size: 1.05rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.01em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Regular 400 italic */
+.nav-btn {
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-style: italic;
+  padding: 4px 0;
+  transition: opacity 0.2s;
+}
+
+.nav-btn:hover { opacity: 0.5; }
+
+/* Dropdown */
+.nav-dropdown { position: relative; }
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  padding: 10px 0;
+  min-width: 150px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out), visibility 0.2s;
+  z-index: 110;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Regular 400 normal for section titles in dropdown */
+.dropdown-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 7px 24px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--grey-900);
+  transition: color 0.15s;
+}
+
+.dropdown-item:hover { color: var(--grey-400); }
+
+/* ============================================================
+   MOBILE BAR (name + burger icon)
+   ============================================================ */
+.mobile-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+  padding: 0 20px;
+  transition: color 0.3s;
+}
+
+/* Extrabold 800 italic */
+.mobile-name {
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  transition: color 0.3s;
+}
+
+body.home-active .mobile-bar { color: var(--white); }
+
+/* Burger: custom image or close X */
+.burger {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.burger-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: opacity 0.25s, filter 0.3s;
+}
+
+
+.burger-close {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.burger.open .burger-icon { opacity: 0; }
+.burger.open .burger-close { opacity: 1; }
+
+/* ============================================================
+   MOBILE MENU
+   ============================================================ */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 115;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s var(--ease-out), visibility 0.35s;
+}
+
+.mobile-menu.open { opacity: 1; visibility: visible; }
+
+.mobile-menu-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-menu-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-menu-label {
+  font-size: 0.7rem;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--grey-400);
+}
+
+/* Regular 400 normal for category names */
+.mobile-menu-cats {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mobile-menu-cat {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--grey-900);
+  transition: color 0.2s;
+}
+
+.mobile-menu-cat:hover { color: var(--grey-400); }
+
+/* Regular 400 italic for "À propos" link */
+.mobile-menu-link {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--grey-900);
+  transition: color 0.2s;
+}
+
+.mobile-menu-link:hover { color: var(--grey-400); }
+
+/* ============================================================
+   VIEWS
+   ============================================================ */
+.view {
+  display: none;
+  min-height: 100dvh;
+  opacity: 0;
+  transition: opacity 0.45s var(--ease-out);
+}
+
+.view--active { display: block; }
+.view--visible { opacity: 1; }
+
+/* ============================================================
+   HOME — FULLSCREEN VIDEO (no overlay title)
+   ============================================================ */
+#view-home { padding-top: 0; }
+
+.home-media {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.home-media video,
+.home-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   CATEGORY — FILMSTRIP
+   ============================================================ */
+#view-category { padding-top: var(--nav-height); }
+
+/* Section title — HIDDEN on mobile, visible on desktop */
+.category-title-bar {
+  position: sticky;
+  top: var(--nav-height);
+  z-index: 10;
+  padding: 14px 20px 10px;
+  background: var(--white);
+  display: none; /* hidden on mobile */
+}
+
+.category-title {
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--grey-900);
+}
+
+.filmstrip-wrapper {
+  position: relative;
+  height: calc(100dvh - 8px);
+  overflow: hidden;
+}
+
+.filmstrip-track {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+  padding: 8px 20px 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  scrollbar-width: none;
+}
+
+.filmstrip-track::-webkit-scrollbar { display: none; }
+.filmstrip-track.is-dragging { cursor: grabbing; scroll-behavior: auto; scroll-snap-type: none; }
+
+/* Slide base */
+.slide {
+  flex: 0 0 auto;
+  height: 100%;
+  scroll-snap-align: start;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+
+.slide--visible { opacity: 1; transform: translateX(0); }
+
+/* IMAGE SLIDE — height fills block, width adapts to image ratio */
+.slide--image {
+  background: var(--grey-100);
+  cursor: zoom-in;
+  height: 100%;
+}
+
+.slide--image img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* TEXT SLIDE — text centered both vertically and horizontally */
+.slide--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 85vw;
+  max-width: 440px;
+  padding: 32px;
+  background: var(--grey-100);
+}
+
+.slide--text p {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--grey-600);
+  font-weight: 300;
+}
+
+/* Arrows */
+.filmstrip-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--grey-600);
+  background: rgba(240, 240, 240, 0.85);
+  backdrop-filter: blur(6px);
+  transition: opacity 0.25s, background 0.2s, color 0.2s;
+  opacity: 0.65;
+}
+
+.filmstrip-arrow:hover { opacity: 1; background: var(--grey-200); color: var(--grey-900); }
+.filmstrip-arrow--left { left: 6px; }
+.filmstrip-arrow--right { right: 6px; }
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+#view-about { padding-top: var(--nav-height); }
+
+.about-container {
+  min-height: calc(100dvh - var(--nav-height));
+  display: flex;
+  align-items: stretch;
+}
+
+.about-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 28px 20px;
+  gap: 28px;
+}
+
+.about-photo-wrapper { flex-shrink: 0; }
+
+.about-photo {
+  width: 100%;
+  max-height: 55vh;
+  object-fit: cover;
+  background: var(--grey-100);
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--grey-600);
+  white-space: pre-line;
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+
+.about-divider {
+  width: 36px;
+  height: 1px;
+  background: var(--grey-300);
+  margin-bottom: 24px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 7px 14px;
+  border: 1px solid var(--grey-200);
+  border-radius: 100px;
+  color: var(--grey-600);
+  transition: all 0.25s var(--ease-out);
+}
+
+.contact-link:hover { border-color: var(--grey-900); color: var(--grey-900); }
+.contact-link svg { width: 15px; height: 15px; }
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease-out);
+}
+
+.lightbox.active { opacity: 1; pointer-events: auto; }
+
+.lightbox-close {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 44px; height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+  transform: scale(0.95);
+  transition: transform 0.4s var(--ease-out);
+}
+
+.lightbox.active .lightbox-img { transform: scale(1); }
+
+/* ============================================================
+   RESPONSIVE — TABLET (640px+)
+   ============================================================ */
+@media (min-width: 640px) {
+  :root { --nav-height: 52px; }
+
+  .filmstrip-track { padding: 8px 32px 24px; gap: 20px; }
+  .slide--text { width: 55vw; max-width: 460px; padding: 40px; }
+
+  .about-layout { padding: 36px 32px; gap: 36px; }
+}
+
+/* ============================================================
+   DESKTOP (1024px+)
+   ============================================================ */
+@media (min-width: 1024px) {
+  :root { --nav-height: 52px; }
+
+  /* Show desktop navbar, hide mobile bar */
+  .navbar { display: flex; }
+  .mobile-bar { display: none; }
+  .mobile-menu { display: none !important; }
+
+  .navbar { padding: 0 56px; }
+
+  /* Show section title on desktop */
+  .category-title-bar {
+    display: block;
+    padding: 20px 56px 10px;
+  }
+
+  #view-category { padding-top: var(--nav-height); }
+
+  .filmstrip-wrapper {
+    height: calc(100dvh - var(--nav-height) - 50px);
+  }
+
+  .filmstrip-track { padding: 0 56px 28px; gap: 24px; }
+  .slide--text { width: 34vw; max-width: 480px; padding: 48px; }
+  .slide--text p { font-size: 0.92rem; }
+  .filmstrip-arrow--left { left: 14px; }
+  .filmstrip-arrow--right { right: 14px; }
+
+  /* About: side by side */
+  #view-about { padding-top: var(--nav-height); }
+  .about-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 56px;
+    gap: 56px;
+  }
+  .about-photo-wrapper {
+    flex: 0 0 42%;
+    position: sticky;
+    top: calc(var(--nav-height) + 32px);
+  }
+  .about-photo { max-height: none; height: auto; }
+  .about-right { flex: 1; }
+  .about-text { font-size: 0.95rem; }
+}
+
+/* ============================================================
+   LARGE DESKTOP (1400px+)
+   ============================================================ */
+@media (min-width: 1400px) {
+  .navbar { padding: 0 80px; }
+  .category-title-bar { padding: 24px 80px 12px; }
+  .filmstrip-track { padding: 0 80px 32px; gap: 28px; }
+  .about-layout { padding: 64px 80px; gap: 72px; }
+}
+
+/* ============================================================
+   MOBILE-SPECIFIC (<1024px)
+   ============================================================ */
+@media (max-width: 1023px) {
+  #view-category { padding-top: 48px; }
+  #view-about { padding-top: 48px; }
+
+  .filmstrip-wrapper {
+    height: calc(100dvh - 48px);
+  }
+}

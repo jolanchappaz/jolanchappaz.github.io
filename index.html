@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jolan Chappaz</title>
+  <meta name="description" content="Jolan Chappaz — Tatoueur, artiste graphique et poète.">
+  <link rel="icon" id="favicon-link" type="image/png" href="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (desktop) ===== -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-name" id="nav-home">Jolan Chappaz</a>
+    <div class="nav-links">
+      <div class="nav-dropdown" id="nav-dropdown-projets">
+        <button class="nav-btn" id="btn-projets" aria-expanded="false">Projets</button>
+        <div class="dropdown-menu" id="dropdown-projets"></div>
+      </div>
+      <button class="nav-btn" id="btn-about">À propos</button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE: name + burger ===== -->
+  <div class="mobile-bar" id="mobile-bar">
+    <a href="#" class="mobile-name" id="mobile-home">Jolan Chappaz</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <img class="burger-icon" id="burger-icon" src="" alt="Menu">
+      <svg class="burger-close" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M17 5L5 17M5 5L17 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-section">
+        <span class="mobile-menu-label">Projets</span>
+        <div class="mobile-menu-cats" id="mobile-menu-cats"></div>
+      </div>
+      <button class="mobile-menu-link" id="mobile-about">À propos</button>
+    </div>
+  </div>
+
+  <!-- ===== HOME ===== -->
+  <section class="view view--active view--visible" id="view-home">
+    <div class="home-media" id="home-media"></div>
+  </section>
+
+  <!-- ===== CATEGORY PAGE ===== -->
+  <section class="view" id="view-category">
+    <div class="category-title-bar">
+      <h2 class="category-title" id="category-title"></h2>
+    </div>
+    <div class="filmstrip-wrapper">
+      <button class="filmstrip-arrow filmstrip-arrow--left" id="arrow-left" aria-label="Précédent">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 16L7 10L13 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="filmstrip-track" id="filmstrip-track"></div>
+      <button class="filmstrip-arrow filmstrip-arrow--right" id="arrow-right" aria-label="Suivant">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 16L13 10L7 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section class="view" id="view-about">
+    <div class="about-container">
+      <div class="about-layout">
+        <div class="about-photo-wrapper">
+          <img class="about-photo" id="about-photo" src="" alt="Jolan Chappaz">
+        </div>
+        <div class="about-right">
+          <p class="about-text" id="about-text"></p>
+          <div class="about-divider"></div>
+          <div class="contact-links" id="contact-links"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fermer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="projects.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
