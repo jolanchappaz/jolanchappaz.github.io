@@ -30,7 +30,6 @@ const BURGER_ICON_HOME = "images/burger-icon-light.png";
 const HOME = {
   type: "video",                    // "video" ou "image"
   src: "videos/video.mp4",          // chemin vers ta vidéo ou image
-  poster: "images/home-poster.jpg", // image pendant le chargement
 };
 
 

@@ -5,7 +5,7 @@ Tu n'as besoin de modifier **qu'un seul fichier** : `projects.js`
 ## 📹 Vidéo d'accueil
 Section `HOME` → change `src` avec le chemin de ta vidéo (ou image)
 
-## ✏️ Page "À propos"
+## ✏️ Page "About"
 Section `ABOUT` → ta photo, ton texte, ton email et insta
 
 ## 🎨 Catégories / Projets
