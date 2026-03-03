@@ -386,6 +386,16 @@ body.home-active .mobile-bar { color: var(--white); }
   line-height: 1.8;
   color: var(--grey-600);
   font-weight: 300;
+  white-space: pre-line;
+}
+
+.slide--text a {
+  color: var(--grey-900);
+  transition: opacity 0.2s;
+}
+
+.slide--text a:hover {
+  opacity: 0.5;
 }
 
 /* Arrows */

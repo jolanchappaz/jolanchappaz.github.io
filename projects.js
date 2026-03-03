@@ -69,12 +69,14 @@ const CATEGORIES = [
     title: "Tattoo",
     slides: [
       { type: "image", src: "images/Tattoo/1.webp" },
-      { type: "text", content: "I work at Nuit Noire Tattoo in Geneva. All my tattoos are made without the aid of a machine." },
+      { type: "text", content: `I work at Nuit Noire Tattoo in Geneva. 
+        All my tattoos are made without the aid of a machine.`},
       { type: "image", src: "images/Tattoo/2.webp" },      
       { type: "text", content: "Most of my designs are inspired by the history of tattooing and Swiss folk art, and can be tattooed several times." },
       { type: "image", src: "images/Tattoo/3.webp" },
       { type: "image", src: "images/Tattoo/4.webp" },
-      { type: "text", content: "I also take some personal projects. If it’s too far from my work, I’ll do my best to recommend other tattooers." },
+      { type: "text", content: `I also take some personal projects. 
+        If it’s too far from my work, I’ll do my best to recommend other tattooers.` },
       { type: "image", src: "images/Tattoo/5.webp" },
       { type: "image", src: "images/Tattoo/6.webp" },
       { type: "image", src: "images/Tattoo/7.webp" },
@@ -89,12 +91,15 @@ const CATEGORIES = [
     id: "paintings",
     title: "Paintings",
     slides: [
-      { type: "image", src: "images/Paintings/1.JPG" },
-      { type: "text", content: "‘Quick and painless’ 1h max of painting Acrylic on cardboard 40x55 cm For all inquiries: mail Paintings 5, 7 and 8 are sold." },
-      { type: "image", src: "images/Paintings/2.JPG" },
-      { type: "image", src: "images/Paintings/3.JPG" },
-      { type: "image", src: "images/Paintings/4.JPG" },
-      { type: "image", src: "images/Paintings/5.JPG" },
+      { type: "image", src: "images/Paintings/1.jpg" },
+      { type: "text", content: `Quick and painless
+        1h max of painting Acrylic on cardboard 40x55 cm
+        For all inquiries: mail
+        Paintings 5, 7 and 8 are sold.` },
+      { type: "image", src: "images/Paintings/2.jpg" },
+      { type: "image", src: "images/Paintings/3.jpg" },
+      { type: "image", src: "images/Paintings/4.jpg" },
+      { type: "image", src: "images/Paintings/5.jpg" },
       { type: "image", src: "images/Paintings/6.jpg" },
       { type: "image", src: "images/Paintings/7.jpg" },
       { type: "image", src: "images/Paintings/8.jpg" },
@@ -106,14 +111,20 @@ const CATEGORIES = [
     title: "Bonne Nuit (2025)",
     slides: [
       { type: "image", src: "images/Bonne Nuit 2025/1.jpg" },
-      { type: "text", content: "Bonne Nuit 30 poems: 2021 30 sheets of flashs: 2023-2025 Layout and printing: Kaleidoskop Editions (Jordan Espagne), Martigny, Switzerland, 2026" },
+      { type: "text", content: `Bonne Nuit
+      30 poems: 2021
+      30 sheets of flashs: 2023-2025
+      Layout and printing: Kaleidoskop Editions (Jordan Espagne), Martigny, Switzerland,
+      2026` },
       { type: "image", src: "images/Bonne Nuit 2025/2.jpg" },
       { type: "image", src: "images/Bonne Nuit 2025/3.jpg" },
       { type: "text", content: "With this first collection of poems ~ flash book, I wanted to create a hand-assembled box set that includes: 1 set of stickers and 10 zines - each containing 3 poems, 3 sheets of flash tattoos, and unfolding into an A3 poster." },
       { type: "image", src: "images/Bonne Nuit 2025/4.jpg" },
       { type: "image", src: "images/Bonne Nuit 2025/5.jpg" },
       { type: "image", src: "images/Bonne Nuit 2025/6.jpg" },
-      { type: "text", content: "Limited edition of 100 copies. 35 CHF (+ shipping costs). For all inquiries: mail" },
+      { type: "text", content: `Limited edition of 100 copies.
+35 CHF (+ shipping costs).
+For all inquiries: mail` },
     ],
   },
 
@@ -130,12 +141,25 @@ const CATEGORIES = [
     title: "Merch",
     slides: [
       { type: "image", src: "images/Merch/1.jpg" },
-      { type: "text", content: "Bandanas to wear or to hang at home. The design is inspired by the summers I spent haying at my grandparents. Every bandana has been manually screen printed in Switzerland by @sami_and_co_ch. Prints may contain imperfections and, therefore, have slight differences. That’s part of the process and beauty of working by hand. *54x54 cm *97% polyester, 3% cotton *Khaki with black ink / Khaki with off-white ink *SOLD OUT" },
+      { type: "text", content: `Bandanas to wear or to hang at home.
+The design is inspired by the summers I spent haying at my grandparents.
+Every bandana has been manually screen printed in Switzerland by <a href="https://www.instagram.com/sami_and_co_ch/" target="_blank">@sami_and_co_ch</a>. Prints may contain imperfections and, therefore, have slight differences. That’s part of the process and beauty of working by hand.
+*54x54 cm
+*97% polyester, 3% cotton
+*Khaki with black ink /
+Khaki with off-white ink
+*SOLD OUT` },
       { type: "image", src: "images/Merch/2.jpg" },
       { type: "image", src: "images/Merch/3.jpg" },
       { type: "image", src: "images/Merch/4.jpg" },
       { type: "image", src: "images/Merch/5.jpg" },
-      { type: "text", content: "J.C on Viagra’ 2025 A tribute to one of the best frontman ever: Sebastian Murphy from the band Viagra Boys. I painted it for the collective exhibition celebrating the 20th birthday of my all time favourite concert venue: les Docks in Lausanne. The painting reinterprets Murphy’s tattoos and blends some visuals from the band’s albums.* On the chair : original painting, 50x40cm, acrylic on cardboard* On the wall: high quality print, A2, on fine art paper 300 g/m2, serie of 11 signed For all inquiries: mail" },
+      { type: "text", content: `J.C on Viagra’ 2025
+A tribute to one of the best frontman ever: Sebastian Murphy from the band Viagra Boys.
+I painted it for the collective exhibition celebrating the 20th birthday of my all time favourite concert venue: les Docks in Lausanne.
+The painting reinterprets Murphy’s tattoos and blends some visuals from the band’s albums.
+*On the chair : original painting, 50x40cm, acrylic on cardboard
+*On the wall: high quality print, A2, on fine art paper 300 g/m2, serie of 11 signed
+For all inquiries: mail` },
       { type: "image", src: "images/Merch/6.jpg" },
       { type: "image", src: "images/Merch/7.jpg" },
     ],
