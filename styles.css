@@ -414,10 +414,10 @@ body.home-active .mobile-bar { color: var(--white); }
   background: rgba(240, 240, 240, 0.85);
   backdrop-filter: blur(6px);
   transition: opacity 0.25s, background 0.2s, color 0.2s;
-  opacity: 0.65;
+  opacity: 0.45;
 }
 
-.filmstrip-arrow:hover { opacity: 1; background: var(--grey-200); color: var(--grey-900); }
+.filmstrip-arrow:hover { opacity: 0.8; background: var(--grey-200); color: var(--grey-900); }
 .filmstrip-arrow--left { left: 6px; }
 .filmstrip-arrow--right { right: 6px; }
 

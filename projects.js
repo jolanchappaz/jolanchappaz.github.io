@@ -144,6 +144,7 @@ For all inquiries: mail` },
       { type: "text", content: `Bandanas to wear or to hang at home.
 The design is inspired by the summers I spent haying at my grandparents.
 Every bandana has been manually screen printed in Switzerland by <a href="https://www.instagram.com/sami_and_co_ch/" target="_blank">@sami_and_co_ch</a>. Prints may contain imperfections and, therefore, have slight differences. That’s part of the process and beauty of working by hand.
+
 *54x54 cm
 *97% polyester, 3% cotton
 *Khaki with black ink /

@@ -247,10 +247,14 @@
 
   // Arrows
   arrowLeft.addEventListener("click", () => {
-    filmstripTrack.scrollBy({ left: -window.innerWidth * 0.55, behavior: "smooth" });
+    const slide = filmstripTrack.querySelector(".slide");
+    const slideWidth = slide ? slide.offsetWidth + 24 : window.innerWidth * 0.55;
+    filmstripTrack.scrollBy({ left: -slideWidth, behavior: "smooth" });
   });
   arrowRight.addEventListener("click", () => {
-    filmstripTrack.scrollBy({ left: window.innerWidth * 0.55, behavior: "smooth" });
+    const slide = filmstripTrack.querySelector(".slide");
+    const slideWidth = slide ? slide.offsetWidth + 24 : window.innerWidth * 0.55;
+    filmstripTrack.scrollBy({ left: slideWidth, behavior: "smooth" });
   });
 
   // Drag to scroll
