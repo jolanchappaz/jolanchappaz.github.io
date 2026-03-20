@@ -67,8 +67,8 @@ Photo © Joachim Sommer`,
 
 const CATEGORIES = [
   {
-    id: "tattoo",
-    title: "Tattoo",
+    id: "tattoos",
+    title: "Tattoos",
     slides: [
       { type: "image", src: "images/Tattoo/1.webp" },
       { type: "text", content: `I work at Nuit Noire Tattoo in Geneva. 
@@ -90,8 +90,8 @@ const CATEGORIES = [
   },
 
   {
-    id: "painting",
-    title: "Painting",
+    id: "paintings",
+    title: "Paintings",
     slides: [
       { type: "image", src: "images/Paintings/1.JPG" },
       { type: "text", content: `'Quick and painless'
