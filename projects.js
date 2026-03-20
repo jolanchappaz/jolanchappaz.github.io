@@ -41,7 +41,9 @@ const ABOUT = {
   photo: "images/About/01.jpeg",
 
   text: `Jolan Chappaz grew up in the Swiss alps surrounded by endless views. This has forever shaped the gentleness of his gaze. With an academic background, a master's degree in communication and journalism, he finds the needed balance by spending his free time in the mountains and his sketchbooks.
+
 The direct writing and instinctive drawings that unfold there share a common characteristic: conveying a sensation in just a few words or gestures. That’s why he has always been drawn to poetry - and more recently songwriting. Visually, he draws his inspiration from Swiss folk art and the history of tattooing.
+
 He currently works at Nuit Noire Tattoo in Geneva and from his home atelier in Villars-sur-Ollon, Switzerland.
 
 Photo © Joachim Sommer`,
