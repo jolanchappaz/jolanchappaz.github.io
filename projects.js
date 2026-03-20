@@ -44,7 +44,7 @@ const ABOUT = {
 The direct writing and instinctive drawings that unfold there share a common characteristic: conveying a sensation in just a few words or gestures. That’s why he has always been drawn to poetry - and more recently songwriting. Visually, he draws his inspiration from Swiss folk art and the history of tattooing.
 He currently works at Nuit Noire Tattoo in Geneva and from his home atelier in Villars-sur-Ollon, Switzerland.
 
-Photo: © Joachim Sommer`,
+Photo © Joachim Sommer`,
 
   email: "workwithjolan@outlook.com",
   instagram: "https://instagram.com/jolan_chappaz",
@@ -119,7 +119,7 @@ const CATEGORIES = [
       Kaleidoskop Editions (Jordan Espagne), 
       Martigny, Switzerland, 2026
       
-      Photos: © Jordan Espane` },
+      Photos © Jordan Espane` },
       { type: "image", src: "images/Bonne Nuit 2025/2.jpg" },
       { type: "image", src: "images/Bonne Nuit 2025/3.jpg" },
       { type: "text", content: `With this first collection of poems ~ flash book, 
