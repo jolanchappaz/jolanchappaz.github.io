@@ -111,7 +111,7 @@ const CATEGORIES = [
     id: "bonne nuit 2025",
     title: "Bonne Nuit (2025)",
     slides: [
-      { type: "image", src: "images/Bonne Nuit 2025/1.jpg" },
+      { type: "image", src: "images/Bonne Nuit (2025)/1.jpg" },
       { type: "text", content: `'Bonne Nuit'
       30 poems: 2021
       30 sheets of flashs: 2023-2025
