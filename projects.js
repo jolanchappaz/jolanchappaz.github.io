@@ -78,7 +78,7 @@ const CATEGORIES = [
       { type: "image", src: "images/Tattoo/5.webp" },
       { type: "image", src: "images/Tattoo/6.webp" },
       { type: "image", src: "images/Tattoo/7.webp" },
-      { type: "text", content: `Discover more on my <a href="https://www.instagram.com/jolan_chappaz/" target="_blank">@jolan_chappaz</a> and don’t hesitate to contact me if you have any questions.` },
+      { type: "text", content: `Discover more on <a href="https://www.instagram.com/jolan_chappaz/" target="_blank">@jolan_chappaz</a> and don’t hesitate to contact me if you have any questions.` },
       { type: "image", src: "images/Tattoo/8.webp" },
       { type: "image", src: "images/Tattoo/9.webp" },
       { type: "image", src: "images/Tattoo/10.webp" },
@@ -93,7 +93,7 @@ const CATEGORIES = [
       { type: "text", content: `'Quick and painless'
         1h max of painting Acrylic on cardboard 40x55 cm
         
-        For all inquiries: <a href="workwithjolan@outlook.com" target="_blank">workwithjolan@outlook.com</a>
+        For all inquiries: <a href="mailto:workwithjolan@outlook.com" target="_blank">workwithjolan@outlook.com</a>
         Paintings 5, 7 and 8 are sold.` },
       { type: "image", src: "images/Paintings/2.JPG" },
       { type: "image", src: "images/Paintings/3.JPG" },
