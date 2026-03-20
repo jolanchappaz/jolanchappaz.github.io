@@ -119,13 +119,13 @@ const CATEGORIES = [
       { type: "image", src: "images/Bonne Nuit 2025/2.jpg" },
       { type: "image", src: "images/Bonne Nuit 2025/3.jpg" },
       { type: "text", content: `With this first collection of poems ~ flash book, 
-        I wanted to create a hand-assembled box set that includes: 
-        1 set of stickers and 10 zines - each containing 3 poems, 3 sheets of flash tattoos, and unfolding into an A3 poster.` },
+        I wanted to create a hand-assembled box set that includes: 1 set of stickers and 10 zines - each containing 3 poems, 3 sheets of flash tattoos, and unfolding into an A3 poster.` },
       { type: "image", src: "images/Bonne Nuit 2025/4.jpg" },
       { type: "image", src: "images/Bonne Nuit 2025/5.jpg" },
       { type: "image", src: "images/Bonne Nuit 2025/6.jpg" },
       { type: "text", content: `Limited edition of 100 copies.
 35 CHF (+ shipping costs).
+
 For all inquiries: <a href="mailto:workwithjolan@outlook.com" target="_blank">workwithjolan@outlook.com</a>` },
     ],
   },
