@@ -157,8 +157,6 @@ For all inquiries: <a href="mailto:workwithjolan@outlook.com" target="_blank">wo
       { type: "image", src: "images/A la fin/8.jpg" },
       { type: "image", src: "images/A la fin/9.jpg" },
       { type: "image", src: "images/A la fin/10.jpg" },
-      { type: "image", src: "images/A la fin/11.jpg" },
-      { type: "image", src: "images/A la fin/12.jpg" },
       { type: "image", src: "images/A la fin/13.jpg" },
     ],
   },
