@@ -93,7 +93,7 @@ const CATEGORIES = [
       { type: "text", content: `'Quick and painless'
         1h max of painting Acrylic on cardboard 40x55 cm
         
-        For all inquiries: email: "workwithjolan@outlook.com"
+        For all inquiries: <a href="workwithjolan@outlook.com" target="_blank">workwithjolan@outlook.com</a>
         Paintings 5, 7 and 8 are sold.` },
       { type: "image", src: "images/Paintings/2.JPG" },
       { type: "image", src: "images/Paintings/3.JPG" },
