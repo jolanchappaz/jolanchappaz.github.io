@@ -110,20 +110,23 @@ const CATEGORIES = [
     title: "Bonne Nuit (2025)",
     slides: [
       { type: "image", src: "images/Bonne Nuit 2025/1.jpg" },
-      { type: "text", content: `Bonne Nuit
+      { type: "text", content: `'Bonne Nuit'
       30 poems: 2021
       30 sheets of flashs: 2023-2025
-      Layout and printing: Kaleidoskop Editions (Jordan Espagne), Martigny, Switzerland,
-      2026` },
+      Layout and printing: 
+      Kaleidoskop Editions (Jordan Espagne), 
+      Martigny, Switzerland, 2026` },
       { type: "image", src: "images/Bonne Nuit 2025/2.jpg" },
       { type: "image", src: "images/Bonne Nuit 2025/3.jpg" },
-      { type: "text", content: "With this first collection of poems ~ flash book, I wanted to create a hand-assembled box set that includes: 1 set of stickers and 10 zines - each containing 3 poems, 3 sheets of flash tattoos, and unfolding into an A3 poster." },
+      { type: "text", content: `With this first collection of poems ~ flash book, 
+        I wanted to create a hand-assembled box set that includes: 
+        1 set of stickers and 10 zines - each containing 3 poems, 3 sheets of flash tattoos, and unfolding into an A3 poster.` },
       { type: "image", src: "images/Bonne Nuit 2025/4.jpg" },
       { type: "image", src: "images/Bonne Nuit 2025/5.jpg" },
       { type: "image", src: "images/Bonne Nuit 2025/6.jpg" },
       { type: "text", content: `Limited edition of 100 copies.
 35 CHF (+ shipping costs).
-For all inquiries: mail` },
+For all inquiries: <a href="mailto:workwithjolan@outlook.com" target="_blank">workwithjolan@outlook.com</a>` },
     ],
   },
 
