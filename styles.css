@@ -561,7 +561,7 @@ body.home-active .mobile-bar { color: var(--white); }
 
   /* Show section title on desktop */
   .category-title-bar {
-    display: block;
+    display: none;
     padding: 20px 56px 10px;
   }
 
