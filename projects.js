@@ -140,7 +140,7 @@ For all inquiries: <a href="mailto:workwithjolan@outlook.com" target="_blank">wo
     slides: [
       { type: "image", src: "images/A la fin/1.jpg" },
       { type: "text", content: `'À la fin, donc aujourd'hui, je t'aime'
-      An artistic dialogue with visual artist Cecile Giovannini, with her paintings and my poems
+      An artistic dialogue with visual artist Cecile Giovannini, combining her paintings and my poems
       
       Photos © Serena Porcher-Carli` },
       { type: "image", src: "images/A la fin/2.jpg" },
