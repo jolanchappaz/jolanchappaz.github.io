@@ -151,8 +151,7 @@ For all inquiries: <a href="mailto:workwithjolan@outlook.com" target="_blank">wo
       { type: "text", content: `In 2024, we were invited by the Flore-Alpe botanical garden (Champex-Lac, Switzerland) for a residency, from May to October.` },
       { type: "image", src: "images/A la fin/5.jpg" },
       { type: "image", src: "images/A la fin/6.jpg" },
-     { type: "text", content: `We immersed ourselves in the garden, bringing with us finished and ongoing works, new ideas and explorations.
-From this, new works emerged, and the whole was presented as an outdoor exhibition.` },
+     { type: "text", content: `We immersed ourselves in the garden, bringing with us finished and ongoing works, new ideas and explorations. From this, new works emerged, and the whole was presented as an outdoor exhibition.` },
 { type: "image", src: "images/A la fin/7.jpg" },
       { type: "image", src: "images/A la fin/8.jpg" },
       { type: "image", src: "images/A la fin/9.jpg" },
