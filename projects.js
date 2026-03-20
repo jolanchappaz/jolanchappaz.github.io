@@ -78,7 +78,7 @@ const CATEGORIES = [
       { type: "image", src: "images/Tattoo/5.webp" },
       { type: "image", src: "images/Tattoo/6.webp" },
       { type: "image", src: "images/Tattoo/7.webp" },
-      { type: "text", content: `Discover more on my <a href="https://www.instagram.com/jolan_chappaz/" target="_blank">@jolan_chappaz</a> and don’t hesitate to contact me if you have any questions." }`,
+      { type: "text", content: `Discover more on my <a href="https://www.instagram.com/jolan_chappaz/" target="_blank">@jolan_chappaz</a> and don’t hesitate to contact me if you have any questions.` },
       { type: "image", src: "images/Tattoo/8.webp" },
       { type: "image", src: "images/Tattoo/9.webp" },
       { type: "image", src: "images/Tattoo/10.webp" },
