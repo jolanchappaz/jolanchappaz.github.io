@@ -16,9 +16,9 @@
   };
 
   const navHome = $("#nav-home");
-  const btnProjects = $("#btn-projects");
+  const btnProjects = $("#btn-Projects");
   const btnAbout = $("#btn-about");
-  const dropdownMenu = $("#dropdown-projects");
+  const dropdownMenu = $("#dropdown-Projects");
   const homeMedia = $("#home-media");
   const categoryTitle = $("#category-title");
   const filmstripTrack = $("#filmstrip-track");
@@ -116,7 +116,7 @@
   });
 
   document.addEventListener("click", (e) => {
-    if (dropdownOpen && !e.target.closest("#nav-dropdown-projects")) closeDropdown();
+    if (dropdownOpen && !e.target.closest("#nav-dropdown-Projects")) closeDropdown();
   });
 
   // ===== MOBILE MENU =====
