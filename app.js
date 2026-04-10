@@ -16,9 +16,9 @@
   };
 
   const navHome = $("#nav-home");
-  const btnProjects = $("#btn-Projects");
+  const btnprojects = $("#btn-projects");
   const btnAbout = $("#btn-about");
-  const dropdownMenu = $("#dropdown-Projects");
+  const dropdownMenu = $("#dropdown-projects");
   const homeMedia = $("#home-media");
   const categoryTitle = $("#category-title");
   const filmstripTrack = $("#filmstrip-track");
@@ -101,22 +101,22 @@
   function openDropdown() {
     dropdownOpen = true;
     dropdownMenu.classList.add("open");
-    btnProjects.setAttribute("aria-expanded", "true");
+    btnprojects.setAttribute("aria-expanded", "true");
   }
 
   function closeDropdown() {
     dropdownOpen = false;
     dropdownMenu.classList.remove("open");
-    btnProjects.setAttribute("aria-expanded", "false");
+    btnprojects.setAttribute("aria-expanded", "false");
   }
 
-  btnProjects.addEventListener("click", (e) => {
+  btnprojects.addEventListener("click", (e) => {
     e.stopPropagation();
     dropdownOpen ? closeDropdown() : openDropdown();
   });
 
   document.addEventListener("click", (e) => {
-    if (dropdownOpen && !e.target.closest("#nav-dropdown-Projects")) closeDropdown();
+    if (dropdownOpen && !e.target.closest("#nav-dropdown-projects")) closeDropdown();
   });
 
   // ===== MOBILE MENU =====
