@@ -436,7 +436,7 @@ body.home-active .mobile-bar { color: var(--white); }
 /* ============================================================
    ABOUT
    ============================================================ */
-#view-about { padding-top: var(--nav-height); }
+#view-about { padding-top: var(--nav-height); position: relative; }
 
 .about-container {
   min-height: calc(100dvh - var(--nav-height));
@@ -504,24 +504,27 @@ body.home-active .mobile-bar { color: var(--white); }
 .contact-link:hover { border-color: var(--grey-900); color: var(--grey-900); }
 .contact-link svg { width: 15px; height: 15px; }
 
-/* Crédit auteur — discret, en bas de la colonne About */
+/* Crédit auteur — mini footer discret, ancré en bas à droite de la page */
 .site-credit {
-  margin-top: 22px;
-  font-size: 0.7rem;
+  position: absolute;
+  right: 20px;
+  bottom: 14px;
+  margin: 0;
+  font-size: 0.62rem;
   font-weight: 300;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   color: var(--grey-400);
 }
 
 .site-credit a {
-  color: var(--grey-500);
+  color: var(--grey-400);
   border-bottom: 1px solid transparent;
   transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
 }
 
 .site-credit a:hover {
-  color: var(--grey-900);
-  border-bottom-color: var(--grey-400);
+  color: var(--grey-700);
+  border-bottom-color: var(--grey-300);
 }
 
 /* ============================================================
@@ -619,13 +622,15 @@ body.home-active .mobile-bar { color: var(--white); }
     gap: 56px;
   }
   .about-photo-wrapper {
-    flex: 0 0 42%;
+    flex: 0 0 28%;
     position: sticky;
     top: calc(var(--nav-height) + 32px);
   }
   .about-photo { max-height: none; height: auto; }
   .about-right { flex: 1; }
   .about-text { font-size: 0.95rem; line-height: 1.8; margin-bottom: 28px; }
+
+  .site-credit { right: 56px; bottom: 22px; }
 }
 
 /* ============================================================
@@ -636,6 +641,7 @@ body.home-active .mobile-bar { color: var(--white); }
   .category-title-bar { padding: 24px 80px 12px; }
   .filmstrip-track { padding: 0 80px 32px; gap: 28px; }
   .about-layout { padding: 64px 80px; gap: 72px; }
+  .site-credit { right: 80px; }
 }
 
 /* ============================================================
