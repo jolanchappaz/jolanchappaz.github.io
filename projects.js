@@ -42,8 +42,9 @@ window.CONTENT_READY = (async function loadContent() {
     // 2. About
     ABOUT = await getJSON("content/about.json");
 
-    // 3. Projets : on lit l'index puis chaque fichier
-    const index = await getJSON("content/projects/index.json");
+    // 3. Projets : on lit l'index (hors du dossier projects/ pour
+    //    que Decap CMS ne le confonde pas avec un projet) puis chaque fichier.
+    const index = await getJSON("content/projects-index.json");
     const projects = await Promise.all(
       index.map((file) => getJSON("content/projects/" + file))
     );
