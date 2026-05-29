@@ -34,8 +34,8 @@ auth:
 locale: 'fr'
 
 # Dossier où sont uploadées les images depuis le CMS.
-media_folder: 'images/uploads'
-public_folder: 'images/uploads'
+media_folder: 'images'
+public_folder: 'images'
 
 # Liens et logo dans l'interface Decap CMS
 site_url: https://jolanchappaz.ch
@@ -58,7 +58,6 @@ collections:
     identifier_field: 'title'
     summary: '{{fields.order}} — {{title}}'
     sortable_fields: ['order', 'title']
-    filter: { field: 'slug', value: 'index', exclude: true } # ignore index.json
     fields:
       - { name: 'order', label: "Ordre d'affichage", widget: 'number', value_type: 'int', min: 1, hint: "Détermine l'ordre dans le menu (1 = premier)." }
       - { name: 'title', label: 'Titre du projet', widget: 'string', hint: "Nom affiché dans le menu et en haut de la page." }
