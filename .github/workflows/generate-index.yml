@@ -1,0 +1,38 @@
+# Régénère content/projects/index.json + sitemap.xml automatiquement
+# dès que Jolan ajoute / modifie / supprime un projet via le CMS.
+name: Generate content index
+
+on:
+  push:
+    paths:
+      - 'content/projects/**'
+    branches:
+      - main   # ⚠️ adapter si la branche publiée n'est pas "main"
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate index.json and sitemap.xml
+        run: node scripts/generate-index.js
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add content/projects/index.json sitemap.xml
+            git commit -m "chore: regenerate content index & sitemap [skip ci]"
+            git push
+          else
+            echo "Rien à committer."
+          fi
