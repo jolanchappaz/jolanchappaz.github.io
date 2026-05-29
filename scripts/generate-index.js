@@ -1,10 +1,14 @@
 #!/usr/bin/env node
 /* ============================================================
    Génère automatiquement :
-   - content/projects/index.json  (liste des fichiers projets)
+   - content/projects-index.json  (liste des fichiers projets)
    - sitemap.xml                  (avec date du jour)
    Lancé par GitHub Actions à chaque modification du contenu.
    Aucune dépendance externe (Node standard).
+
+   NB : l'index est volontairement placé HORS du dossier
+        content/projects/ pour que Decap CMS ne le lise pas
+        comme un projet (sinon la collection casse).
    ============================================================ */
 
 const fs = require("fs");
@@ -12,7 +16,7 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const PROJECTS_DIR = path.join(ROOT, "content", "projects");
-const INDEX_FILE = path.join(PROJECTS_DIR, "index.json");
+const INDEX_FILE = path.join(ROOT, "content", "projects-index.json");
 const SITEMAP_FILE = path.join(ROOT, "sitemap.xml");
 const SITE_URL = "https://jolanchappaz.ch/";
 
@@ -23,7 +27,7 @@ const files = fs
   .sort();
 
 fs.writeFileSync(INDEX_FILE, JSON.stringify(files, null, 2) + "\n");
-console.log(`index.json mis à jour (${files.length} projet(s)).`);
+console.log(`projects-index.json mis à jour (${files.length} projet(s)).`);
 
 // ---- 2. Sitemap (site mono-page : une seule URL) ----
 const today = new Date().toISOString().slice(0, 10);
