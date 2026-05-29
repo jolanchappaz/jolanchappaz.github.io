@@ -1,0 +1,128 @@
+# ============================================================
+#  CONFIGURATION DECAP CMS — Portfolio Jolan Chappaz
+#  Authentification : DecapBridge (PKCE)
+# ============================================================
+
+backend:
+  name: git-gateway
+  repo: jolanchappaz/jolanchappaz
+  branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/68abb3b3-0fac-40fa-9230-96ab194a05b0/pkce
+  auth_token_endpoint: /sites/68abb3b3-0fac-40fa-9230-96ab194a05b0/token
+  gateway_url: https://gateway.decapbridge.com
+  commit_messages:
+    create: 'Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    update: 'Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    delete: 'Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    uploadMedia: 'Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    deleteMedia: 'Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    openAuthoring: 'Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge'
+
+# Champs DecapBridge (PKCE)
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+# Pour tester en local avec `npx decap-server` (décommenter) :
+# local_backend: true
+
+# Langue de l'interface
+locale: 'fr'
+
+# Dossier où sont uploadées les images depuis le CMS.
+media_folder: 'images/uploads'
+public_folder: 'images/uploads'
+
+# Liens et logo dans l'interface Decap CMS
+site_url: https://jolanchappaz.ch
+display_url: https://jolanchappaz.ch
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+collections:
+  # ----------------------------------------------------------
+  #  PROJETS — création / modification / suppression
+  # ----------------------------------------------------------
+  - name: 'projects'
+    label: 'Projets'
+    label_singular: 'Projet'
+    folder: 'content/projects'
+    create: true
+    delete: true
+    extension: 'json'
+    format: 'json'
+    slug: '{{fields.order}}-{{slug}}'
+    identifier_field: 'title'
+    summary: '{{fields.order}} — {{title}}'
+    sortable_fields: ['order', 'title']
+    filter: { field: 'slug', value: 'index', exclude: true } # ignore index.json
+    fields:
+      - { name: 'order', label: "Ordre d'affichage", widget: 'number', value_type: 'int', min: 1, hint: "Détermine l'ordre dans le menu (1 = premier)." }
+      - { name: 'title', label: 'Titre du projet', widget: 'string', hint: "Nom affiché dans le menu et en haut de la page." }
+      - { name: 'slug', label: 'Identifiant (slug)', widget: 'string', pattern: ['^[a-z0-9-]+$', 'Lettres minuscules, chiffres et tirets uniquement'], hint: "Identifiant technique unique, sans espace ni accent. Ex : bonne-nuit-2025" }
+      - name: 'slides'
+        label: 'Contenu (images & textes)'
+        label_singular: 'Élément'
+        widget: 'list'
+        types:
+          - name: 'image'
+            label: 'Image'
+            summary: '🖼️ {{fields.src}}'
+            widget: 'object'
+            fields:
+              - { name: 'type', widget: 'hidden', default: 'image' }
+              - { name: 'src', label: 'Image', widget: 'image', hint: "Glisse-dépose une image ou choisis-en une existante." }
+          - name: 'text'
+            label: 'Texte'
+            summary: '📝 {{fields.content}}'
+            widget: 'object'
+            fields:
+              - { name: 'type', widget: 'hidden', default: 'text' }
+              - { name: 'content', label: 'Texte', widget: 'text', hint: "Tu peux utiliser des liens HTML, ex : <a href=\"mailto:...\">email</a>. Les retours à la ligne sont conservés." }
+
+  # ----------------------------------------------------------
+  #  PAGES UNIQUES — réglages, accueil, à propos
+  # ----------------------------------------------------------
+  - name: 'pages'
+    label: 'Pages & réglages'
+    files:
+      # ---- Réglages généraux + page d'accueil + SEO ----
+      - name: 'settings'
+        label: 'Réglages & accueil'
+        file: 'content/settings.json'
+        fields:
+          - { name: 'favicon', label: 'Favicon (icône onglet)', widget: 'image', required: false }
+          - { name: 'burger_icon_dark', label: 'Icône menu (pages claires)', widget: 'image', required: false }
+          - { name: 'burger_icon_light', label: 'Icône menu (accueil sombre)', widget: 'image', required: false }
+          - name: 'home'
+            label: "Page d'accueil (média plein écran)"
+            widget: 'object'
+            fields:
+              - { name: 'type', label: 'Type de média', widget: 'select', options: ['video', 'image'], default: 'video' }
+              - { name: 'src', label: 'Fichier (vidéo .mp4 ou image)', widget: 'file', hint: "Vidéo en .mp4 de préférence, ou une image." }
+              - { name: 'poster', label: 'Image de prévisualisation (optionnel, pour vidéo)', widget: 'image', required: false }
+          - name: 'seo'
+            label: 'SEO (référencement)'
+            widget: 'object'
+            fields:
+              - { name: 'site_url', label: 'URL du site', widget: 'string', default: 'https://jolanchappaz.ch/' }
+              - { name: 'title', label: 'Titre (balise title)', widget: 'string' }
+              - { name: 'description', label: 'Description', widget: 'text' }
+              - { name: 'og_image', label: 'Image de partage (réseaux sociaux)', widget: 'image', required: false }
+              - { name: 'keywords', label: 'Mots-clés', widget: 'string', required: false }
+
+      # ---- Page À propos ----
+      - name: 'about'
+        label: 'À propos'
+        file: 'content/about.json'
+        fields:
+          - { name: 'photo', label: 'Photo', widget: 'image' }
+          - { name: 'text', label: 'Texte de présentation', widget: 'text', hint: "Les retours à la ligne sont conservés." }
+          - { name: 'email', label: 'Email', widget: 'string', required: false }
+          - { name: 'instagram', label: 'Instagram (URL)', widget: 'string', required: false }
+          - { name: 'tiktok', label: 'TikTok (URL)', widget: 'string', required: false }
+          - { name: 'youtube', label: 'YouTube (URL)', widget: 'string', required: false }
+          - { name: 'behance', label: 'Behance (URL)', widget: 'string', required: false }
