@@ -3,9 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jolan Chappaz</title>
-  <meta name="description" content="Jolan Chappaz — Tatoueur, artiste graphique et poète.">
+  <title>Jolan Chappaz — Tattoo Artist, Graphic Artist &amp; Poet</title>
+  <meta name="description" content="Jolan Chappaz — hand-poked tattoo artist, graphic artist and poet based between Geneva and Villars-sur-Ollon, Switzerland. Tattoos, paintings, poetry and artist books inspired by Swiss folk art.">
+  <meta name="keywords" content="Jolan Chappaz, tattoo, hand poke, handpoke, Geneva, Switzerland, Swiss folk art, poetry, paintings, Nuit Noire Tattoo">
+  <meta name="author" content="Jolan Chappaz">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jolanchappaz.ch/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jolan Chappaz">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Jolan Chappaz — Tattoo Artist, Graphic Artist &amp; Poet">
+  <meta property="og:description" content="Hand-poked tattoo artist, graphic artist and poet based between Geneva and Villars-sur-Ollon, Switzerland.">
+  <meta property="og:url" content="https://jolanchappaz.ch/">
+  <meta property="og:image" content="https://jolanchappaz.ch/images/og-cover.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jolan Chappaz — Tattoo Artist, Graphic Artist &amp; Poet">
+  <meta name="twitter:description" content="Hand-poked tattoo artist, graphic artist and poet based between Geneva and Villars-sur-Ollon, Switzerland.">
+  <meta name="twitter:image" content="https://jolanchappaz.ch/images/og-cover.jpg">
+
   <link rel="icon" id="favicon-link" type="image/png" href="">
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jolan Chappaz",
+    "url": "https://jolanchappaz.ch/",
+    "jobTitle": ["Tattoo Artist", "Graphic Artist", "Poet"],
+    "nationality": "Swiss",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Nuit Noire Tattoo",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Geneva",
+        "addressCountry": "CH"
+      }
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Villars-sur-Ollon",
+      "addressCountry": "CH"
+    },
+    "sameAs": [
+      "https://instagram.com/jolan_chappaz"
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&display=swap" rel="stylesheet">
@@ -48,6 +97,27 @@
   <!-- ===== HOME ===== -->
   <section class="view view--active view--visible" id="view-home">
     <div class="home-media" id="home-media"></div>
+
+    <!-- Contenu textuel pour le SEO et les lecteurs d'écran (visuellement masqué).
+         Le H1 est rempli dynamiquement par app.js depuis settings.json. -->
+    <div class="sr-only">
+      <h1 id="seo-h1">Jolan Chappaz — Tattoo Artist, Graphic Artist &amp; Poet</h1>
+      <p>Jolan Chappaz is a Swiss hand-poked tattoo artist, graphic artist and poet.
+         He works at Nuit Noire Tattoo in Geneva and from his home atelier in
+         Villars-sur-Ollon, Switzerland. His work spans tattoos, paintings, poetry
+         and self-published artist books, drawing inspiration from Swiss folk art
+         and the history of tattooing.</p>
+      <nav aria-label="Sections">
+        <ul>
+          <li>Tattoos — hand-poked, machine-free tattooing inspired by Swiss folk art.</li>
+          <li>Paintings — acrylic works on cardboard.</li>
+          <li>Bonne Nuit (2025) — a poetry and flash artist book, limited edition.</li>
+          <li>À la fin (2024) — an artistic dialogue with Cécile Giovannini.</li>
+          <li>Merch — screen-printed bandanas and prints.</li>
+          <li>About — biography and contact.</li>
+        </ul>
+      </nav>
+    </div>
   </section>
 
   <!-- ===== CATEGORY PAGE ===== -->

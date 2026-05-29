@@ -313,9 +313,62 @@
   lightboxClose.addEventListener("click", closeLightbox);
   lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
 
+  // ===== SEO DYNAMIQUE (titres, meta, H1 caché) =====
+  function applySEO() {
+    if (typeof SEO === "undefined" || !SEO) return;
+
+    if (SEO.title) {
+      document.title = SEO.title;
+      setMeta("property", "og:title", SEO.title);
+      setMeta("name", "twitter:title", SEO.title);
+    }
+    if (SEO.description) {
+      setMeta("name", "description", SEO.description);
+      setMeta("property", "og:description", SEO.description);
+      setMeta("name", "twitter:description", SEO.description);
+    }
+    if (SEO.keywords) setMeta("name", "keywords", SEO.keywords);
+    if (SEO.site_url) {
+      setMeta("property", "og:url", SEO.site_url);
+      const canonical = $('link[rel="canonical"]');
+      if (canonical) canonical.href = SEO.site_url;
+    }
+    if (SEO.og_image) {
+      const abs = SEO.og_image.startsWith("http")
+        ? SEO.og_image
+        : (SEO.site_url || "") + SEO.og_image;
+      setMeta("property", "og:image", abs);
+      setMeta("name", "twitter:image", abs);
+    }
+
+    // Remplit le H1 caché (présent dans le HTML pour la hiérarchie/SEO)
+    const h1 = $("#seo-h1");
+    if (h1 && SEO.title) h1.textContent = SEO.title;
+  }
+
+  function setMeta(attr, key, value) {
+    let el = document.head.querySelector(`meta[${attr}="${key}"]`);
+    if (!el) {
+      el = document.createElement("meta");
+      el.setAttribute(attr, key);
+      document.head.appendChild(el);
+    }
+    el.setAttribute("content", value);
+  }
+
   // ===== INIT =====
-  setupCustomAssets();
-  renderHome();
-  renderMenus();
-  renderAbout();
+  function init() {
+    applySEO();
+    setupCustomAssets();
+    renderHome();
+    renderMenus();
+    renderAbout();
+  }
+
+  // Attend le chargement asynchrone du contenu (projects.js) avant d'initialiser.
+  if (window.CONTENT_READY && typeof window.CONTENT_READY.then === "function") {
+    window.CONTENT_READY.then(init);
+  } else {
+    init();
+  }
 })();

@@ -1,203 +1,69 @@
 // ============================================================
-//  FICHIER DE DONNÉES — C'EST ICI QUE TU MODIFIES TON SITE
-//  Jolan, tu n'as besoin de toucher QUE ce fichier !
-// ============================================================
-
-
-// ============================================================
-//  1. PERSONNALISATION DU SITE
-// ============================================================
-
-// Favicon — la petite icône dans l'onglet du navigateur
-// Formats recommandés : .png, .ico, .svg (32x32px ou 64x64px)
-const FAVICON = "images/favicon.png";
-
-// Icône du menu burger (version mobile)
-// C'est l'image qui remplace le menu hamburger classique
-// Formats recommandés : .png, .svg (environ 28x28px)
-
-// Icône burger pour les pages intérieures (fond blanc)
-const BURGER_ICON = "images/burger-icon-dark.png";
-
-// Icône burger pour la home (fond vidéo sombre)
-const BURGER_ICON_HOME = "images/burger-icon-light.png";
-
-
-// ============================================================
-//  2. PAGE D'ACCUEIL — La vidéo ou image plein écran
-// ============================================================
-
-const HOME = {
-  type: "video",                    // "video" ou "image"
-  src: "videos/video.mp4",          // chemin vers ta vidéo ou image
-};
-
-
-// ============================================================
-//  3. À PROPOS
-// ============================================================
-
-const ABOUT = {
-  photo: "images/About/01.jpeg",
-
-  text: `Jolan Chappaz grew up in the Swiss alps surrounded by endless views. This has forever shaped the gentleness of his gaze. With an academic background, a master's degree in communication and journalism, he finds the needed balance by spending his free time in the mountains and his sketchbooks.
-
-The direct writing and instinctive drawings that unfold there share a common characteristic: conveying a sensation in just a few words or gestures. That’s why he has always been drawn to poetry - and more recently songwriting. Visually, he draws his inspiration from Swiss folk art and the history of tattooing.
-
-He currently works at Nuit Noire Tattoo in Geneva and from his home atelier in Villars-sur-Ollon, Switzerland.
-
-Photo © Joachim Sommer`,
-
-  email: "workwithjolan@outlook.com",
-  instagram: "https://instagram.com/jolan_chappaz",
-  // Ajoute d'autres réseaux si tu veux :
-  // tiktok: "https://tiktok.com/@jolanchappaz",
-};
-
-
-// ============================================================
-//  4. CATÉGORIES DE PROJETS
-// ============================================================
+//  CHARGEUR DE CONTENU — NE PAS MODIFIER
+//  Le contenu du site se modifie désormais via l'interface
+//  d'administration ( /admin ) propulsée par Decap CMS.
+//  Ce fichier lit les fichiers JSON du dossier /content
+//  et reconstruit les données utilisées par le site.
 //
-//  Chaque slide est soit une IMAGE, soit un TEXTE :
-//  { type: "image", src: "images/tattoo/01.jpg" }
-//  { type: "text", content: "Ton texte ici..." }
-//
+//  ⚠️ Doit être servi en HTTP (GitHub Pages, serveur local).
+//     Un simple double-clic sur index.html (file://) bloquera
+//     le chargement des JSON pour des raisons de sécurité.
 // ============================================================
 
-const CATEGORIES = [
-  {
-    id: "tattoos",
-    title: "Tattoos",
-    slides: [
-      { type: "image", src: "images/Tattoo/1.webp" },
-      { type: "text", content: `I work at Nuit Noire Tattoo in Geneva. 
-        All my tattoos are made without the aid of a machine.`},
-      { type: "image", src: "images/Tattoo/2.webp" },      
-      { type: "text", content: "Most of my designs are inspired by the history of tattooing and Swiss folk art, and can be tattooed several times." },
-      { type: "image", src: "images/Tattoo/3.webp" },
-      { type: "image", src: "images/Tattoo/4.webp" },
-      { type: "text", content: `I also take some personal projects. 
-        If it’s too far from my work, I’ll do my best to recommend other tattooers.` },
-      { type: "image", src: "images/Tattoo/5.webp" },
-      { type: "image", src: "images/Tattoo/6.webp" },
-      { type: "image", src: "images/Tattoo/7.webp" },
-      { type: "text", content: `Discover more on <a href="https://www.instagram.com/jolan_chappaz/" target="_blank">@jolan_chappaz</a> and don’t hesitate to contact me if you have any questions.` },
-      { type: "image", src: "images/Tattoo/8.webp" },
-      { type: "image", src: "images/Tattoo/9.webp" },
-      { type: "image", src: "images/Tattoo/10.webp" },
-    ],
-  },
+// Variables globales attendues par app.js (mêmes noms qu'avant)
+var FAVICON = "";
+var BURGER_ICON = "";
+var BURGER_ICON_HOME = "";
+var HOME = { type: "video", src: "" };
+var ABOUT = {};
+var CATEGORIES = [];
+var SEO = {};
 
-  {
-    id: "paintings",
-    title: "Paintings",
-    slides: [
-      { type: "image", src: "images/Paintings/1.JPG" },
-      { type: "text", content: `'Quick and painless'
-        1h max of painting Acrylic on cardboard 40x55 cm
-        
-        For all inquiries: <a href="mailto:workwithjolan@outlook.com" target="_blank">workwithjolan@outlook.com</a>
-        Paintings 5, 7 and 8 are sold.` },
-      { type: "image", src: "images/Paintings/2.JPG" },
-      { type: "image", src: "images/Paintings/3.JPG" },
-      { type: "image", src: "images/Paintings/4.JPG" },
-      { type: "image", src: "images/Paintings/5.JPG" },
-      { type: "image", src: "images/Paintings/6.jpg" },
-      { type: "image", src: "images/Paintings/7.jpg" },
-      { type: "image", src: "images/Paintings/8.jpg" },
-    ],
-  },
+// Promise résolue quand tout le contenu est chargé.
+// app.js attend cette promise avant de s'initialiser.
+window.CONTENT_READY = (async function loadContent() {
+  const bust = "?v=" + Date.now(); // évite le cache pendant l'édition
 
-  {
-    id: "bonne nuit 2025",
-    title: "Bonne Nuit (2025)",
-    slides: [
-      { type: "image", src: "images/Bonne Nuit (2025)/1.jpg" },
-      { type: "text", content: `'Bonne Nuit'
-      30 poems: 2021
-      30 sheets of flashs: 2023-2025
-      Layout and printing: 
-      Kaleidoskop Editions (Jordan Espagne), 
-      Martigny, Switzerland, 2026
-      
-      Photos © Jordan Espane` },
-      { type: "image", src: "images/Bonne Nuit (2025)/2.jpg" },
-      { type: "image", src: "images/Bonne Nuit (2025)/3.jpg" },
-      { type: "text", content: `With this first collection of poems ~ flash book, 
-        I wanted to create a hand-assembled box set that includes: 1 set of stickers and 10 zines - each containing 3 poems, 3 sheets of flash tattoos, and unfolding into an A3 poster.` },
-      { type: "image", src: "images/Bonne Nuit (2025)/4.jpg" },
-      { type: "image", src: "images/Bonne Nuit (2025)/5.jpg" },
-      { type: "image", src: "images/Bonne Nuit (2025)/6.jpg" },
-      { type: "text", content: `Limited edition of 100 copies.
-35 CHF (+ shipping costs).
+  async function getJSON(path) {
+    const res = await fetch(path + bust, { cache: "no-store" });
+    if (!res.ok) throw new Error("Échec chargement " + path + " (" + res.status + ")");
+    return res.json();
+  }
 
-For all inquiries: <a href="mailto:workwithjolan@outlook.com" target="_blank">workwithjolan@outlook.com</a>` },
-    ],
-  },
+  try {
+    // 1. Settings globaux (favicon, burger, home, seo)
+    const settings = await getJSON("content/settings.json");
+    FAVICON = settings.favicon || "";
+    BURGER_ICON = settings.burger_icon_dark || "";
+    BURGER_ICON_HOME = settings.burger_icon_light || "";
+    HOME = settings.home || HOME;
+    SEO = settings.seo || {};
 
-  {
-    id: "A La Fin 2024",
-    title: "A La Fin (2024)",
-    slides: [
-      { type: "image", src: "images/A la fin/1.jpg" },
-      { type: "text", content: `'À la fin, donc aujourd'hui, je t'aime'
-      An artistic dialogue with visual artist Cecile Giovannini, combining her paintings 
-      and my poems
-      
-      Photos © Serena Porcher-Carli` },
-      { type: "image", src: "images/A la fin/2.jpg" },
-       { type: "text", content: `This project is envisaged as a continuous process, with no final form or timing. 
-       It evolves and adapts to its environment.` },
-       { type: "image", src: "images/A la fin/3.jpg" },
-       { type: "image", src: "images/A la fin/4.jpg" },
-      { type: "text", content: `From May to October 2024, we were invited by the Flore-Alpe botanical garden (Champex-Lac, Switzerland) for a residency.` },
-      { type: "image", src: "images/A la fin/5.jpg" },
-      { type: "image", src: "images/A la fin/6.jpg" },
-     { type: "text", content: `We immersed ourselves in the garden, bringing along finished and ongoing works, new ideas and explorations. From this, new works emerged, and the whole was presented as an outdoor exhibition.` },
-{ type: "image", src: "images/A la fin/7.jpg" },
-      { type: "image", src: "images/A la fin/8.jpg" },
-      { type: "image", src: "images/A la fin/9.jpg" },
-      { type: "image", src: "images/A la fin/10.jpg" },
-      { type: "image", src: "images/A la fin/13.jpg" },
-    ],
-  },
+    // 2. About
+    ABOUT = await getJSON("content/about.json");
 
-  {
-    id: "Merch",
-    title: "Merch",
-    slides: [
-      { type: "image", src: "images/Merch/1.jpg" },
-      { type: "text", content: `Bandanas to wear or to hang at home (2025).
+    // 3. Projets : on lit l'index puis chaque fichier
+    const index = await getJSON("content/projects/index.json");
+    const projects = await Promise.all(
+      index.map((file) => getJSON("content/projects/" + file))
+    );
 
-The design is inspired by the summers I spent haying at my grandparents.
+    // Tri par "order" (puis titre si égalité), comme l'ordre voulu par Jolan
+    projects.sort((a, b) => {
+      const oa = typeof a.order === "number" ? a.order : 999;
+      const ob = typeof b.order === "number" ? b.order : 999;
+      if (oa !== ob) return oa - ob;
+      return (a.title || "").localeCompare(b.title || "");
+    });
 
-Every bandana has been manually screen printed in Switzerland by <a href="https://www.instagram.com/sami_and_co_ch/" target="_blank">@sami_and_co_ch</a>. Prints may contain imperfections and, therefore, have slight differences. That’s part of the process and beauty of working by hand.
-
-*54x54 cm
-*97% polyester, 3% cotton
-*Khaki with black ink /
-Khaki with off-white ink
-*SOLD OUT` },
-      { type: "image", src: "images/Merch/2.jpg" },
-      { type: "image", src: "images/Merch/3.jpg" },
-      { type: "image", src: "images/Merch/4.jpg" },
-      { type: "image", src: "images/Merch/5.jpg" },
-      { type: "text", content: `'J.C on Viagra' (2025)
-
-A tribute to one of the best frontman ever: Sebastian Murphy from the band Viagra Boys.
-I painted it for the collective exhibition celebrating the 20th birthday of les Docks in Lausanne.
-The painting reinterprets Murphy’s tattoos and blends some visuals from the band’s albums.
-
-*On the chair : original painting, 50x40cm, acrylic on cardboard
-*On the wall: high quality print, A2, on fine art paper 300 g/m2, serie of 11 signed
-
-For all inquiries: <a href="mailto:workwithjolan@outlook.com" target="_blank">workwithjolan@outlook.com</a>` },
-      { type: "image", src: "images/Merch/6.jpg" },
-      { type: "image", src: "images/Merch/7.jpg" },
-    ],
-  },
-];
-
-
-// ⚠️ NE TOUCHE PAS EN DESSOUS DE CETTE LIGNE ⚠️
+    // Reconstruit CATEGORIES au format attendu par app.js (id + title + slides)
+    CATEGORIES = projects.map((p) => ({
+      id: p.slug || p.title,
+      title: p.title,
+      slides: Array.isArray(p.slides) ? p.slides : [],
+    }));
+  } catch (err) {
+    console.error("[Portfolio] Erreur de chargement du contenu :", err);
+    // En cas d'échec, on laisse des structures vides : le site ne plante pas.
+  }
+})();
