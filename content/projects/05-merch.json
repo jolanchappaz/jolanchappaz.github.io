@@ -1,0 +1,16 @@
+{
+  "order": 5,
+  "slug": "merch",
+  "title": "Merch",
+  "slides": [
+    { "type": "image", "src": "images/Merch/1.jpg" },
+    { "type": "text", "content": "Bandanas to wear or to hang at home (2025).\n\nThe design is inspired by the summers I spent haying at my grandparents.\n\nEvery bandana has been manually screen printed in Switzerland by <a href=\"https://www.instagram.com/sami_and_co_ch/\" target=\"_blank\">@sami_and_co_ch</a>. Prints may contain imperfections and, therefore, have slight differences. That's part of the process and beauty of working by hand.\n\n*54x54 cm\n*97% polyester, 3% cotton\n*Khaki with black ink /\nKhaki with off-white ink\n*SOLD OUT" },
+    { "type": "image", "src": "images/Merch/2.jpg" },
+    { "type": "image", "src": "images/Merch/3.jpg" },
+    { "type": "image", "src": "images/Merch/4.jpg" },
+    { "type": "image", "src": "images/Merch/5.jpg" },
+    { "type": "text", "content": "'J.C on Viagra' (2025)\n\nA tribute to one of the best frontman ever: Sebastian Murphy from the band Viagra Boys.\nI painted it for the collective exhibition celebrating the 20th birthday of les Docks in Lausanne.\nThe painting reinterprets Murphy's tattoos and blends some visuals from the band's albums.\n\n*On the chair : original painting, 50x40cm, acrylic on cardboard\n*On the wall: high quality print, A2, on fine art paper 300 g/m2, serie of 11 signed\n\nFor all inquiries: <a href=\"mailto:workwithjolan@outlook.com\" target=\"_blank\">workwithjolan@outlook.com</a>" },
+    { "type": "image", "src": "images/Merch/6.jpg" },
+    { "type": "image", "src": "images/Merch/7.jpg" }
+  ]
+}

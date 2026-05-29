@@ -1,0 +1,21 @@
+{
+  "order": 1,
+  "slug": "tattoos",
+  "title": "Tattoos",
+  "slides": [
+    { "type": "image", "src": "images/Tattoo/1.webp" },
+    { "type": "text", "content": "I work at Nuit Noire Tattoo in Geneva. \nAll my tattoos are made without the aid of a machine." },
+    { "type": "image", "src": "images/Tattoo/2.webp" },
+    { "type": "text", "content": "Most of my designs are inspired by the history of tattooing and Swiss folk art, and can be tattooed several times." },
+    { "type": "image", "src": "images/Tattoo/3.webp" },
+    { "type": "image", "src": "images/Tattoo/4.webp" },
+    { "type": "text", "content": "I also take some personal projects. \nIf it's too far from my work, I'll do my best to recommend other tattooers." },
+    { "type": "image", "src": "images/Tattoo/5.webp" },
+    { "type": "image", "src": "images/Tattoo/6.webp" },
+    { "type": "image", "src": "images/Tattoo/7.webp" },
+    { "type": "text", "content": "Discover more on <a href=\"https://www.instagram.com/jolan_chappaz/\" target=\"_blank\">@jolan_chappaz</a> and don't hesitate to contact me if you have any questions." },
+    { "type": "image", "src": "images/Tattoo/8.webp" },
+    { "type": "image", "src": "images/Tattoo/9.webp" },
+    { "type": "image", "src": "images/Tattoo/10.webp" }
+  ]
+}
