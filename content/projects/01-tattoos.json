@@ -4,12 +4,12 @@
   "title": "Tattoos",
   "slides": [
     {
-      "type": "text",
-      "content": "I work at Nuit Noire Tattoo in Geneva. \nAll my tattoos are made without the aid of a machine."
-    },
-    {
       "type": "image",
       "src": "images/Tattoo/1.webp"
+    },
+    {
+      "type": "text",
+      "content": "I work at Nuit Noire Tattoo in Geneva. \nAll my tattoos are made without the aid of a machine."
     },
     {
       "type": "image",
