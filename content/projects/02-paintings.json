@@ -9,19 +9,19 @@
     },
     {
       "type": "text",
-      "content": "📝 'Thursdays are for painting' \nAcrylic on wood 10x10 cm \nFor all inquiries: <a href=\"mailto:workwithjolan@outlook.com\" target=\"_blank\">workwithjolan@outlook.com</a> "
+      "content": "'Thursdays are for painting' \nAcrylic on wood 10x10 cm \n\nFor all inquiries: <a href=\"mailto:workwithjolan@outlook.com\" target=\"_blank\">workwithjolan@outlook.com</a> "
     },
     {
       "type": "image",
       "src": "images/2.jpg"
     },
     {
-      "type": "image",
-      "src": "images/Paintings/1.JPG"
-    },
-    {
       "type": "text",
       "content": "'Quick and painless'\n1h max of painting Acrylic on cardboard 40x55 cm\n\nFor all inquiries: <a href=\"mailto:workwithjolan@outlook.com\" target=\"_blank\">workwithjolan@outlook.com</a>\nPaintings 5, 7 and 8 are sold."
+    },
+    {
+      "type": "image",
+      "src": "images/Paintings/1.JPG"
     },
     {
       "type": "image",
