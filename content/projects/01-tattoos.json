@@ -28,6 +28,10 @@
       "src": "images/head.webp"
     },
     {
+      "type": "image",
+      "src": "images/Tattoo/3.webp"
+    },
+    {
       "type": "text",
       "content": "I also take some personal projects. \nIf it's too far from my work, I'll do my best to recommend other tattooers."
     },
@@ -37,7 +41,7 @@
     },
     {
       "type": "image",
-      "src": "images/Tattoo/3.webp"
+      "src": "images/chat.jpg"
     },
     {
       "type": "image",
