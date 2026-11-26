@@ -1,0 +1,39 @@
+{
+  "order": 3,
+  "title": "Shoes Off",
+  "slug": "shoes-off",
+  "slides": [
+    {
+      "type": "image",
+      "src": "images/shoes-off_1.jpeg"
+    },
+    {
+      "type": "text",
+      "content": "'Shoes Off'\nA two-day event at home where we tattoo and go spend some time in the mountains.\n\nDiscover more on <a href=\"https://www.instagram.com/jolan_chappaz/\" target=\"_blank\">@jolan_chappaz</a> \n\nPhotos © Gabriel Premand Hierro"
+    },
+    {
+      "type": "image",
+      "src": "https://www.instagram.com/p/DeZYjCBMb5L/"
+    },
+    {
+      "type": "image",
+      "src": "images/shoes-off_2.jpg"
+    },
+    {
+      "type": "image",
+      "src": "images/shoes-off_3.jpg"
+    },
+    {
+      "type": "image",
+      "src": "images/shoes-off_4.jpg"
+    },
+    {
+      "type": "image",
+      "src": "images/shoes-off_5.jpg"
+    },
+    {
+      "type": "image",
+      "src": "images/shoes-off_6.jpg"
+    }
+  ]
+}
