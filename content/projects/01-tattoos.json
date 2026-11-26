@@ -1,7 +1,7 @@
 {
   "order": 1,
-  "slug": "tattoos",
   "title": "Tattoos",
+  "slug": "tattoos",
   "slides": [
     {
       "type": "image",
@@ -21,11 +21,11 @@
     },
     {
       "type": "image",
-      "src": "images/Tattoo/3.webp"
+      "src": "images/skull.webp"
     },
     {
       "type": "image",
-      "src": "images/Tattoo/4.webp"
+      "src": "images/head.webp"
     },
     {
       "type": "text",
@@ -33,15 +33,15 @@
     },
     {
       "type": "image",
-      "src": "images/Tattoo/5.webp"
+      "src": "images/horse.webp"
     },
     {
       "type": "image",
-      "src": "images/Tattoo/6.webp"
+      "src": "images/Tattoo/3.webp"
     },
     {
       "type": "image",
-      "src": "images/Tattoo/7.webp"
+      "src": "images/poet.webp"
     },
     {
       "type": "text",
@@ -49,11 +49,11 @@
     },
     {
       "type": "image",
-      "src": "images/Tattoo/8.webp"
+      "src": "images/Tattoo/5.webp"
     },
     {
       "type": "image",
-      "src": "images/Tattoo/9.webp"
+      "src": "images/Tattoo/8.webp"
     },
     {
       "type": "image",
