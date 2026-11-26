@@ -1,15 +1,19 @@
 {
   "order": 2,
-  "slug": "paintings",
   "title": "Paintings",
+  "slug": "paintings",
   "slides": [
     {
       "type": "image",
-      "src": "images/1.jpg"
+      "src": "images/oilpastels_wood.jpg"
     },
     {
       "type": "text",
       "content": "'Thursdays are for painting' \nAcrylic on wood 10x10 cm \n\nFor all inquiries: <a href=\"mailto:workwithjolan@outlook.com\" target=\"_blank\">workwithjolan@outlook.com</a>"
+    },
+    {
+      "type": "image",
+      "src": "images/1.jpg"
     },
     {
       "type": "image",
